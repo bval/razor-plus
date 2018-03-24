@@ -9,6 +9,15 @@
             "include": "#razor-code-block"
         },
         {
+            "include": "#razor-else-if"
+        },
+        {
+            "include": "#razor-if"
+        },
+        {
+            "include": "#razor-else"
+        },
+        {
             "include": "text.html.basic"
         }
 	],
@@ -165,6 +174,48 @@
                     "name": "keyword.control.cshtml"
                 }
             }
+        },
+        "razor-if": {
+            "begin": "(@if)",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.cs"
+                }
+            ],
+            "end": "$"
+        },
+        "razor-else": {
+            "begin": "(else)",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.cs"
+                }
+            ],
+            "end": "$"
+        },
+        "razor-else-if": {
+            "begin": "(else\\s+if)",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.cs"
+                }
+            ],
+            "end": "$"
         },
         "razor-code-block": {
             "begin": "@?\\{",
