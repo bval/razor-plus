@@ -21,13 +21,18 @@
 			"name": "comment.block.cshtml"
         },
         "razor-directives": {
+            "name": "meta.directive.cshtml",
             "patterns": [
                 {
                     "include": "#using-directive"
+                },
+                {
+                    "include": "#model-directive"
                 }
             ]
         },
         "using-directive": {
+            "name": "meta.directive.using.cshtml",
             "begin": "(@using)\\s+",
             "captures": {
                 "0": {
@@ -41,6 +46,21 @@
             ],
             "end": "$"
         },
+        "model-directive": {
+            "name": "meta.directive.model.cshtml",
+            "begin": "(@model)\\s+",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "#csharp-type-name"
+                }
+            ],
+            "end": "$"
+        },
         "csharp-namespace-identifier": {
             "patterns": [
                 {
@@ -48,6 +68,47 @@
                     "match": "[_[:alpha:]][_[:alnum:]]*"
                 }
             ]
-        }
+        },
+        "csharp-type-name": {
+			"patterns": [
+				{
+					"match": "([_[:alpha:]][_[:alnum:]]*)\\s*(\\:\\:)",
+					"captures": {
+						"1": {
+							"name": "entity.name.type.alias.cs"
+						},
+						"2": {
+							"name": "punctuation.separator.coloncolon.cs"
+						}
+					}
+				},
+				{
+					"match": "([_[:alpha:]][_[:alnum:]]*)\\s*(\\.)",
+					"captures": {
+						"1": {
+							"name": "storage.type.cs"
+						},
+						"2": {
+							"name": "punctuation.accessor.cs"
+						}
+					}
+				},
+				{
+					"match": "(\\.)\\s*([_[:alpha:]][_[:alnum:]]*)",
+					"captures": {
+						"1": {
+							"name": "punctuation.accessor.cs"
+						},
+						"2": {
+							"name": "storage.type.cs"
+						}
+					}
+				},
+				{
+					"name": "storage.type.cs",
+					"match": "[_[:alpha:]][_[:alnum:]]*"
+				}
+			]
+		}
 	}
 }
