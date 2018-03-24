@@ -18,6 +18,9 @@
             "include": "#razor-else"
         },
         {
+            "include": "#razor-foreach"
+        },
+        {
             "include": "text.html.basic"
         }
 	],
@@ -205,6 +208,20 @@
         },
         "razor-else-if": {
             "begin": "(else\\s+if)",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.cs"
+                }
+            ],
+            "end": "$"
+        },
+        "razor-foreach": {
+            "begin": "(@foreach)",
             "captures": {
                 "0": {
                     "name": "keyword.control.cshtml"
