@@ -36,12 +36,12 @@
             },
             "patterns": [
                 {
-                    "include": "#razor-identifier"
+                    "include": "#csharp-namespace-identifier"
                 }
             ],
             "end": "$"
         },
-        "razor-identifier": {
+        "csharp-namespace-identifier": {
             "patterns": [
                 {
                     "name": "entity.name.type.namespace.cs",
