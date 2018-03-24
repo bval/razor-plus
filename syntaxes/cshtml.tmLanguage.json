@@ -28,6 +28,9 @@
                 },
                 {
                     "include": "#model-directive"
+                },
+                {
+                    "include": "#inherits-directive"
                 }
             ]
         },
@@ -49,6 +52,21 @@
         "model-directive": {
             "name": "meta.directive.model.cshtml",
             "begin": "(@model)\\s+",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "#csharp-type-name"
+                }
+            ],
+            "end": "$"
+        },
+        "inherits-directive": {
+            "name": "meta.directive.inherits.cshtml",
+            "begin": "(@inherits)\\s+",
             "captures": {
                 "0": {
                     "name": "keyword.control.cshtml"
