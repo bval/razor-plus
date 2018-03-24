@@ -37,6 +37,9 @@
                 },
                 {
                     "include": "#implements-directive"
+                },
+                {
+                    "include": "#layout-directive"
                 }
             ]
         },
@@ -103,6 +106,21 @@
         "implements-directive": {
             "name": "meta.directive.implements.cshtml",
             "begin": "(@implements)\\s+",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "#csharp-type-name"
+                }
+            ],
+            "end": "$"
+        },
+        "layout-directive": {
+            "name": "meta.directive.layout.cshtml",
+            "begin": "(@layout)\\s+",
             "captures": {
                 "0": {
                     "name": "keyword.control.cshtml"
