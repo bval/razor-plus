@@ -40,6 +40,9 @@
                 },
                 {
                     "include": "#layout-directive"
+                },
+                {
+                    "include": "#page-directive"
                 }
             ]
         },
@@ -133,6 +136,21 @@
             ],
             "end": "$"
         },
+        "page-directive": {
+            "name": "meta.directive.page.cshtml",
+            "begin": "(@page)\\s+",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.cs"
+                }
+            ],
+            "end": "$"
+        },
         "csharp-namespace-identifier": {
             "patterns": [
                 {
@@ -181,6 +199,6 @@
 					"match": "[_[:alpha:]][_[:alnum:]]*"
 				}
 			]
-		}
+        }
 	}
 }
