@@ -31,6 +31,9 @@
                 },
                 {
                     "include": "#inherits-directive"
+                },
+                {
+                    "include": "#inject-directive"
                 }
             ]
         },
@@ -67,6 +70,21 @@
         "inherits-directive": {
             "name": "meta.directive.inherits.cshtml",
             "begin": "(@inherits)\\s+",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "#csharp-type-name"
+                }
+            ],
+            "end": "$"
+        },
+        "inject-directive": {
+            "name": "meta.directive.inject.cshtml",
+            "begin": "(@inject)\\s+",
             "captures": {
                 "0": {
                     "name": "keyword.control.cshtml"
