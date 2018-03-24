@@ -6,6 +6,9 @@
             "include": "#razor-directives"
         },
         {
+            "include": "#razor-code-block"
+        },
+        {
             "include": "text.html.basic"
         }
 	],
@@ -43,6 +46,9 @@
                 },
                 {
                     "include": "#page-directive"
+                },
+                {
+                    "include": "#functions-directive"
                 }
             ]
         },
@@ -150,6 +156,32 @@
                 }
             ],
             "end": "$"
+        },
+        "functions-directive": {
+            "name": "meta.directive.functions.cshtml",
+            "match": "(@functions)",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            }
+        },
+        "razor-code-block": {
+            "begin": "@?\\{",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "text.html.cshtml"
+                },
+                {
+                    "include": "source.cs"
+                }
+            ],
+            "end": "\\}"
         },
         "csharp-namespace-identifier": {
             "patterns": [
