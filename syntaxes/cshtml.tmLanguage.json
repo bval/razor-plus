@@ -87,13 +87,12 @@
         },
         "implicit-razor-expression": {
             "name": "meta.expression.implicit.cshtml",
-            "begin": "(@)([a-zA-Z0-9\\.\\_\\(\\)]+)",
+            "match": "(@)([a-zA-Z0-9\\.\\_\\(\\)]+)",
             "captures": {
                 "0": {
                     "name": "keyword.control.cshtml"
                 }
-            },
-            "end": "$"
+            }
         },
         "using-directive": {
             "name": "meta.directive.using.cshtml",
