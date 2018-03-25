@@ -2,6 +2,10 @@
     "name": "razor-plus",
     "displayName": "razor-plus",
     "description": "Improved Razor support for VS Code with a mind towards Blazor",
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/austincummings/razor-plus.git"
+    },
     "version": "0.1.0",
     "publisher": "austincummings",
     "engines": {
