@@ -6,11 +6,11 @@ Improved Razor syntax colorization for VS Code.
 
 Supports Razor and Blazor directives.
 
-![Directives and Expressions](images/DirectivesAndExpressions.png)
+![Directives and Expressions](images/DirectivesAndExpressions.PNG)
 
 Support for the `@functions` directive.
 
-![functions](images/FunctionsDirective.png)
+![functions](images/FunctionsDirective.PNG)
 
 ## Requirements
 
@@ -25,8 +25,6 @@ None
 - Implicit Razor expressions `@doSomething()` aren't colored using the C# syntax.
 
 ## Release Notes
-
-Users appreciate release notes as you update your extension.
 
 ### 0.1.0
 
