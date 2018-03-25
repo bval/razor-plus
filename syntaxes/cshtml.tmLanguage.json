@@ -21,6 +21,12 @@
             "include": "#razor-foreach"
         },
         {
+            "include": "#explicit-razor-expression"
+        },
+        {
+            "include": "#implicit-razor-expression"
+        },
+        {
             "include": "text.html.basic"
         }
 	],
@@ -63,6 +69,31 @@
                     "include": "#functions-directive"
                 }
             ]
+        },
+        "explicit-razor-expression": {
+            "name": "meta.expression.explicit.cshtml",
+            "begin": "(@)\\(",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.cs"
+                }
+            ],
+            "end": "\\)"
+        },
+        "implicit-razor-expression": {
+            "name": "meta.expression.implicit.cshtml",
+            "begin": "(@)([a-zA-Z0-9\\.\\_\\(\\)]+)",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "end": "$"
         },
         "using-directive": {
             "name": "meta.directive.using.cshtml",
@@ -221,7 +252,7 @@
             "end": "$"
         },
         "razor-foreach": {
-            "begin": "(@foreach)",
+            "begin": "(@foreach)\\s+\\(",
             "captures": {
                 "0": {
                     "name": "keyword.control.cshtml"
@@ -232,7 +263,7 @@
                     "include": "source.cs"
                 }
             ],
-            "end": "$"
+            "end": "\\)"
         },
         "razor-code-block": {
             "begin": "@?\\{",
