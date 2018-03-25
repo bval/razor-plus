@@ -1,37 +1,18 @@
 {
     "name": "razor-plus",
     "displayName": "razor-plus",
-    "description": "",
-    "version": "0.0.1",
+    "description": "Improved Razor support for VS Code with a mind towards Blazor",
+    "version": "0.1.0",
     "publisher": "austincummings",
     "engines": {
         "vscode": "^1.21.0"
     },
     "contributes": {
-        "languages": [
-            {
-                "id": "razor",
-                "extensions": [
-                    ".cshtml"
-                ],
-                "aliases": [
-                    "Razor",
-                    "razor"
-                ],
-                "mimetypes": [
-                    "text/x-cshtml"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
         "grammars": [
             {
                 "language": "razor",
                 "scopeName": "text.html.cshtml",
-                "path": "./syntaxes/cshtml.tmLanguage.json",
-                "embeddedLanguages": {
-                    "section.embedded.source.cshtml": "csharp"
-                }
+                "path": "./syntaxes/cshtml.tmLanguage.json"
             }
         ]
     },
