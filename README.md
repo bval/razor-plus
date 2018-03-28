@@ -26,6 +26,11 @@ None
 
 ## Release Notes
 
+### 0.1.2
+
+- Fix `@for` loop coloring
+- Fix razor comments
+
 ### 0.1.1
 
 Fix broken readme images
