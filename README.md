@@ -1,4 +1,4 @@
-# razor-plus
+# Razor+
 
 Improved Razor syntax colorization for VS Code.
 

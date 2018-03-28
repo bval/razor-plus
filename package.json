@@ -1,6 +1,6 @@
 {
     "name": "razor-plus",
-    "displayName": "razor-plus",
+    "displayName": "Razor+",
     "description": "Improved Razor support for VS Code with a mind towards Blazor",
     "repository": {
         "type" : "git",
