@@ -6,7 +6,7 @@
         "type" : "git",
         "url" : "https://github.com/austincummings/razor-plus.git"
     },
-    "version": "0.1.1",
+    "version": "0.1.2",
     "publisher": "austincummings",
     "engines": {
         "vscode": "^1.21.0"
