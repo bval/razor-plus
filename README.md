@@ -26,6 +26,10 @@ None
 
 ## Release Notes
 
+### 0.1.3
+
+Change name to `Razor+`
+
 ### 0.1.2
 
 - Fix `@for` loop coloring
