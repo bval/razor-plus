@@ -24,6 +24,9 @@
             "include": "#razor-foreach"
         },
         {
+            "include": "#razor-for"
+        },
+        {
             "include": "#explicit-razor-expression"
         },
         {
@@ -254,7 +257,21 @@
             "end": "$"
         },
         "razor-foreach": {
-            "begin": "(@foreach)\\s+\\(",
+            "begin": "(@foreach)\\s*\\(",
+            "captures": {
+                "0": {
+                    "name": "keyword.control.cshtml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.cs"
+                }
+            ],
+            "end": "\\)"
+        },
+        "razor-for": {
+            "begin": "(@for)\\s*\\(",
             "captures": {
                 "0": {
                     "name": "keyword.control.cshtml"
