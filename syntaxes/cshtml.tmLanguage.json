@@ -3,6 +3,9 @@
 	"scopeName": "text.html.cshtml",
 	"patterns": [
         {
+            "include": "#comments"
+        },
+        {
             "include": "#razor-directives"
         },
         {
