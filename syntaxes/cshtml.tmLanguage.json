@@ -102,18 +102,20 @@
         },
         "using-directive": {
             "name": "meta.directive.using.cshtml",
-            "begin": "(@using)\\s+",
+            "begin": "(@)(?=using)(.*)",
             "captures": {
                 "0": {
                     "name": "keyword.control.cshtml"
+                },
+                "2": {
+                    "patterns": [
+                        {
+                            "include": "source.cs"
+                        }
+                    ]
                 }
             },
-            "patterns": [
-                {
-                    "include": "#csharp-namespace-identifier"
-                }
-            ],
-            "end": "$"
+            "end": "(?=$)"
         },
         "model-directive": {
             "name": "meta.directive.model.cshtml",
