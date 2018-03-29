@@ -11,6 +11,14 @@
     "engines": {
         "vscode": "^1.21.0"
     },
+    "categories": [
+        "Languages"
+    ],
+    "keywords": [
+        "razor",
+        "C#",
+        "asp.net"
+    ],
     "contributes": {
         "grammars": [
             {
