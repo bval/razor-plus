@@ -1,3 +1,6 @@
+@using Test.Test
+@using Test1
+
 @{
     var total = 0;
     var totalMessage = "";
@@ -14,6 +17,8 @@
 		<italic><bold>totalMessage = "Total = " + total;</bold></italic>
     }
 }
+
+@await test();
 
 <!DOCTYPE html>
 <html lang="en">
