@@ -1,3 +1,7 @@
+# CAVEAT EMPTOR
+
+This repository is _unmaintained_ and exists only to mirror the MIT licensed project that once existed at github.com/austincummings/razor-plus so other projects dependent upon it continue to work. This may disappear entirely or find a new home in the future.
+
 # Razor+
 
 Improved Razor syntax colorization for VS Code.
